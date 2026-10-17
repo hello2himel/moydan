@@ -1,0 +1,17 @@
+{
+  "name": "@moydan/storage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Object storage abstraction (filesystem dev adapter + S3-compatible production driver) shared by the API and the game content origin.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@moydan/core": "*"
+  }
+}

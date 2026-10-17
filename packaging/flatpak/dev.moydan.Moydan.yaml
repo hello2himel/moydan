@@ -1,0 +1,33 @@
+# Flatpak manifest for Moydan (reference manifest).
+#
+# `packaging/flatpak/build-flatpak.sh` produces the same artefact with the
+# low-level `flatpak build` commands, so flatpak-builder is not required. This file
+# is the declarative description of what ends up in the package and is what
+# flatpak-builder (or Flathub) would consume.
+app-id: dev.moydan.Moydan
+runtime: org.gnome
+runtime-version: '48'
+sdk: org.gnome.Sdk
+command: moydan
+
+finish-args:
+  # Needed to reach the deployment over the network (the shell is a client; in
+  # local mode it also supervises the platform processes bundled inside the app).
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --env=MOYDAN_SERVER_URL=https://moydan.example
+
+modules:
+  - name: moydan
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 ../../target/release/moydan-desktop /app/bin/moydan
+      - install -Dm644 dev.moydan.Moydan.desktop /app/share/applications/dev.moydan.Moydan.desktop
+      - install -Dm644 dev.moydan.Moydan.metainfo.xml /app/share/metainfo/dev.moydan.Moydan.metainfo.xml
+      - install -Dm644 ../../icons/moydan.svg /app/share/icons/hicolor/scalable/apps/dev.moydan.Moydan.svg
+      - install -Dm644 ../../icons/moydan-256.png /app/share/icons/hicolor/256x256/apps/dev.moydan.Moydan.png
+    sources:
+      - type: dir
+        path: .

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>dev.moydan.Moydan</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>AGPL-3.0-only</project_license>
+  <name>Moydan</name>
+  <summary>Scroll, play, save and remix tiny browser games</summary>
+  <description>
+    <p>
+      Moydan is an open-source social platform for short, immediately playable browser games.
+      Every item in the vertical feed is a game you can play in place: react to it, comment on it,
+      save it, share it, follow the creator, and remix it with your own parameters or source.
+    </p>
+    <p>
+      This Flatpak is the desktop shell for a Moydan deployment. Point it at your own instance and
+      the feed, saved games, profiles and the creator studio all work exactly as they do in a
+      browser. Games themselves run in a separate, sandboxed origin provided by the deployment.
+    </p>
+    <p>
+      Set the server address from the "Server" button in the header bar, or with the
+      MOYDAN_SERVER_URL environment variable.
+    </p>
+  </description>
+  <launchable type="desktop-id">dev.moydan.Moydan.desktop</launchable>
+  <url type="homepage">https://github.com/hello2himel/moydan</url>
+  <url type="bugtracker">https://github.com/hello2himel/moydan/issues</url>
+  <url type="vcs-browser">https://github.com/hello2himel/moydan</url>
+  <developer id="dev.moydan">
+    <name>The Moydan contributors</name>
+  </developer>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2026-10-18">
+      <description>
+        <p>First alpha.</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating>
+    <content_attribute id="social-info">Contains user-generated content</content_attribute>
+  </content_rating>
+</component>

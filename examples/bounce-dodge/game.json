@@ -1,0 +1,121 @@
+{
+  "manifestVersion": 1,
+  "slug": "bounce-dodge",
+  "title": "Bounce Dodge",
+  "description": "Drag to move your bar, dodge the bouncing blocks and survive as long as you can. Score is survival time.",
+  "engine": {
+    "name": "canvas2d",
+    "version": "1.0.0"
+  },
+  "runtime": {
+    "apiVersion": "1"
+  },
+  "entry": "src/main.ts",
+  "orientation": "portrait",
+  "viewport": {
+    "width": 720,
+    "height": 1280,
+    "scale": "fit"
+  },
+  "input": [
+    "pointer",
+    "touch"
+  ],
+  "capabilities": [
+    "score",
+    "storage",
+    "audio",
+    "vibration"
+  ],
+  "license": {
+    "spdx": "MIT",
+    "file": "LICENSE",
+    "attributionText": "Bounce Dodge by the Moydan examples contributors, MIT licensed.",
+    "assets": [
+      {
+        "path": "assets/ui/mark.svg",
+        "license": "MIT",
+        "source": "original artwork drawn for this example",
+        "attribution": "\"Bounce Dodge\" shield mark, drawn from scratch for the Moydan examples, MIT licensed."
+      }
+    ]
+  },
+  "remix": {
+    "allowed": true,
+    "modes": [
+      "parameters",
+      "source"
+    ],
+    "parameters": [
+      {
+        "key": "speed",
+        "label": "Block speed",
+        "description": "Multiplier on how fast the blocks fall.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 0.6,
+        "max": 2.5,
+        "step": 0.05,
+        "default": 1
+      },
+      {
+        "key": "lives",
+        "label": "Lives",
+        "description": "Hits you can take before the run ends.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "key": "accent",
+        "label": "Accent colour",
+        "description": "Colour of the bar, the blocks and the life pips.",
+        "group": "Look",
+        "type": "color",
+        "default": "#7c5cff"
+      },
+      {
+        "key": "shake",
+        "label": "Screen shake",
+        "description": "Shake the view for a moment when you are hit.",
+        "group": "Feel",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "key": "sound",
+        "label": "Sound",
+        "description": "Play the Web Audio blips. The host can always mute the game.",
+        "group": "Feel",
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  },
+  "presentation": {
+    "thumbnail": "assets/ui/mark.svg",
+    "accentColor": "#7c5cff",
+    "tags": [
+      "canvas2d",
+      "dodge",
+      "one-button"
+    ]
+  },
+  "authors": [
+    {
+      "name": "The Moydan examples contributors",
+      "url": "https://github.com/hello2himel/moydan"
+    }
+  ],
+  "budgets": {
+    "firstPlayableBytes": 131072,
+    "totalBytes": 1048576
+  },
+  "repository": {
+    "provider": "github",
+    "url": "https://github.com/hello2himel/moydan"
+  }
+}

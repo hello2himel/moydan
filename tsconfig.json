@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": false,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@moydan/core": ["packages/core/src/index.ts"],
+      "@moydan/core/*": ["packages/core/src/*"],
+      "@moydan/storage": ["packages/storage/src/index.ts"],
+      "@moydan/storage/*": ["packages/storage/src/*"],
+      "@moydan/runtime": ["packages/runtime/src/index.ts"],
+      "@moydan/runtime/host": ["packages/runtime/src/host.ts"],
+      "@moydan/sdk": ["packages/sdk/src/index.ts"],
+      "@moydan/sdk/*": ["packages/sdk/src/*"]
+    }
+  },
+  "include": [
+    "packages/*/src/**/*.ts",
+    "packages/*/test/**/*.ts",
+    "apps/*/src/**/*.ts",
+    "apps/*/src/**/*.tsx",
+    "apps/*/test/**/*.ts",
+    "examples/*/src/**/*.ts",
+    "apps/web/vite.config.ts",
+    "vitest.config.ts"
+  ]
+}

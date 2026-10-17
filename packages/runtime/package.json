@@ -1,0 +1,16 @@
+{
+  "name": "@moydan/runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Browser-side host runtime: sandboxed iframe bridge, playback control and feed instrumentation.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./host": "./src/host.ts",
+    "./feed": "./src/feed.ts"
+  },
+  "dependencies": {
+    "@moydan/core": "*"
+  }
+}

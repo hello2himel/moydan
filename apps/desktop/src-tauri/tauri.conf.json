@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Moydan",
+  "version": "0.1.0",
+  "identifier": "dev.moydan.desktop",
+  "build": {
+    "frontendDist": "placeholder"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:* ws://127.0.0.1:*; frame-src http://127.0.0.1:* http://localhost:*; frame-ancestors 'none'; object-src 'none'; base-uri 'none'",
+      "capabilities": ["shell-default"],
+      "dangerousDisableAssetCspModification": false
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "appimage", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/icon.png"
+    ],
+    "category": "Network",
+    "shortDescription": "Short playable games",
+    "longDescription": "Moydan is an open-source social platform for short, immediately playable browser games. This desktop shell runs the platform on your own machine or connects to an existing deployment.",
+    "resources": ["placeholder/index.html", "resources/**/*"],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}

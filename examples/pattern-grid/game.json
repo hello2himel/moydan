@@ -1,0 +1,125 @@
+{
+  "manifestVersion": 1,
+  "slug": "pattern-grid",
+  "title": "Pattern Grid",
+  "description": "Watch the grid light up, then repeat it. Every round adds one more cell, and three mistakes end the run.",
+  "engine": {
+    "name": "canvas2d",
+    "version": "1.0.0"
+  },
+  "runtime": {
+    "apiVersion": "1"
+  },
+  "entry": "src/main.ts",
+  "orientation": "portrait",
+  "viewport": {
+    "width": 720,
+    "height": 1280,
+    "scale": "fit"
+  },
+  "input": [
+    "pointer",
+    "touch",
+    "keyboard"
+  ],
+  "capabilities": [
+    "score",
+    "storage",
+    "audio",
+    "vibration"
+  ],
+  "license": {
+    "spdx": "MIT",
+    "file": "LICENSE",
+    "attributionText": "Pattern Grid by the Moydan examples contributors, MIT licensed.",
+    "assets": [
+      {
+        "path": "assets/ui/grid-mark.svg",
+        "license": "MIT",
+        "source": "original artwork drawn for this example",
+        "attribution": "\"Pattern Grid\" grid mark, drawn from scratch for the Moydan examples, MIT licensed."
+      }
+    ]
+  },
+  "remix": {
+    "allowed": true,
+    "modes": [
+      "parameters",
+      "source"
+    ],
+    "parameters": [
+      {
+        "key": "lives",
+        "label": "Lives",
+        "description": "Wrong cells you may press before the run ends.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "key": "flash_ms",
+        "label": "Flash length",
+        "description": "How long each cell stays lit during the reveal, in milliseconds.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 200,
+        "max": 900,
+        "step": 20,
+        "default": 420
+      },
+      {
+        "key": "start_length",
+        "label": "Starting length",
+        "description": "How many cells the very first sequence has.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 2,
+        "max": 9,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "key": "accent",
+        "label": "Accent colour",
+        "description": "Colour of a lit cell and its glow.",
+        "group": "Look",
+        "type": "color",
+        "default": "#4ade80"
+      },
+      {
+        "key": "sound",
+        "label": "Sound",
+        "description": "Play the Web Audio notes, one per cell.",
+        "group": "Feel",
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  },
+  "presentation": {
+    "thumbnail": "assets/ui/grid-mark.svg",
+    "accentColor": "#4ade80",
+    "tags": [
+      "canvas2d",
+      "puzzle",
+      "memory"
+    ]
+  },
+  "authors": [
+    {
+      "name": "The Moydan examples contributors",
+      "url": "https://github.com/hello2himel/moydan"
+    }
+  ],
+  "budgets": {
+    "firstPlayableBytes": 131072,
+    "totalBytes": 1048576
+  },
+  "repository": {
+    "provider": "github",
+    "url": "https://github.com/hello2himel/moydan"
+  }
+}

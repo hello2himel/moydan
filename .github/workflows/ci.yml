@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Typecheck, lint, test, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Vendor the pinned toolchain
+        run: npm run vendor:toolchain
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build the web application
+        run: npm run build
+
+  examples:
+    name: Templates build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run vendor:toolchain
+      - name: Validate every template
+        run: |
+          for game in examples/*/; do
+            echo "::group::$game"
+            node packages/cli/bin/moydan.mjs validate "$game"
+            node packages/cli/bin/moydan.mjs build "$game" --out "$game/dist"
+            echo "::endgroup::"
+          done

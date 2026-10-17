@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Pulse Tap mark">
+  <defs>
+    <linearGradient id="pulse" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#40e0d0"/>
+      <stop offset="1" stop-color="#2aa6b8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="29" fill="#0b0b12"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#24303a" stroke-width="3"/>
+  <circle cx="32" cy="32" r="15" fill="none" stroke="url(#pulse)" stroke-width="4"/>
+  <circle cx="32" cy="32" r="7" fill="none" stroke="#e9e9f5" stroke-width="2.5" opacity=".85"/>
+  <circle cx="32" cy="32" r="3" fill="#e9e9f5"/>
+</svg>

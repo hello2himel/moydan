@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Moydan</string>
+    <string name="choose_server">Choose your Moydan server</string>
+    <string name="choose_server_message">Moydan needs the address of a deployment (for example https://play.example.org). You can change this later from the menu.</string>
+    <string name="server_url_hint">https://</string>
+    <string name="connect">Connect</string>
+    <string name="change_server">Change server</string>
+    <string name="invalid_url">Enter a full http:// or https:// address</string>
+    <string name="cannot_open_link">That link could not be opened</string>
+    <string name="loading_server">Loading %1$s…</string>
+</resources>

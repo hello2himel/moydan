@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Moydan">
+  <rect width="256" height="256" rx="56" fill="#0b0b10"/>
+  <circle cx="128" cy="128" r="87" fill="none" stroke="#7c5cff" stroke-width="9"/>
+  <path d="M113 88 L182 128 L113 168 Z" fill="#7c5cff"/>
+  <circle cx="194" cy="194" r="18" fill="#40e0d0"/>
+</svg>

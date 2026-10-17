@@ -1,0 +1,18 @@
+{
+  "name": "@moydan-example/bounce-dodge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Example Moydan game: dodge incoming blocks, survive as long as you can. Pure Canvas 2D, no engine.",
+  "scripts": {
+    "dev": "moydan dev",
+    "build": "moydan build",
+    "test": "moydan test",
+    "package": "moydan pack"
+  },
+  "devDependencies": {
+    "@moydan/sdk": "*",
+    "typescript": "^5.7.0"
+  }
+}

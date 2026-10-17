@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Moydan
+GenericName=Short playable games
+Comment=Scroll, play, save and remix tiny browser games
+Exec=moydan
+Icon=dev.moydan.Moydan
+Terminal=false
+Type=Application
+Categories=Game;Network;
+StartupWMClass=Moydan
+X-Purism-FormFactor=Workstation;Mobile;

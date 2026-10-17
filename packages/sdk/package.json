@@ -1,0 +1,15 @@
+{
+  "name": "@moydan/sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Creator-facing SDK for Moydan games: lifecycle, remix parameters, scoring, storage and a DPR-aware canvas helper.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@moydan/core": "*"
+  }
+}

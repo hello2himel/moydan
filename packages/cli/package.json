@@ -1,0 +1,17 @@
+{
+  "name": "@moydan/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "bin": {
+    "moydan": "./bin/moydan.mjs"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/cli.js --packages=external"
+  },
+  "dependencies": {
+    "@moydan/core": "*",
+    "esbuild": "^0.25.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@moydan/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "dev": "node --watch src/server.ts",
+    "start": "node src/server.ts",
+    "migrate": "node src/db/migrate-cli.ts",
+    "seed": "node src/db/seed.ts",
+    "gc": "node src/storage/gc-cli.ts",
+    "metrics": "node src/db/metrics-cli.ts",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/rate-limit": "^10.2.2",
+    "@moydan/core": "*",
+    "@moydan/storage": "*",
+    "fastify": "^5.2.0",
+    "fflate": "^0.8.2"
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Bounce Dodge mark">
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8f7bff"/>
+      <stop offset="1" stop-color="#5b3df5"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4 54 12v18c0 14-9.4 24.6-22 30C19.4 54.6 10 44 10 30V12z" fill="url(#shield)"/>
+  <path d="M32 12.5 46 17.4V30c0 9.6-5.9 17.3-14 21.6-8.1-4.3-14-12-14-21.6V17.4z" fill="#0b0b12" opacity=".55"/>
+  <rect x="18" y="27" width="28" height="5" rx="2.5" fill="#ffffff"/>
+  <circle cx="24" cy="18" r="4.5" fill="#ffffff" opacity=".9"/>
+  <circle cx="40" cy="21" r="3.2" fill="#ffffff" opacity=".7"/>
+  <rect x="16" y="47" width="32" height="6" rx="3" fill="#ffffff"/>
+</svg>

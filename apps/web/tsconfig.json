@@ -1,0 +1,8 @@
+{
+  "//": "Type-check settings for the web app only. The workspace root tsconfig.json also includes apps/web sources; this file exists so `npm run typecheck -w @moydan/web` (`tsc -b`) has a project to build.",
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts", "playwright.config.ts"]
+}

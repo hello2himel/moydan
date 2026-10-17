@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Pattern Grid mark">
+  <defs>
+    <linearGradient id="cell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ef2a8"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="18" height="18" rx="5" fill="url(#cell)"/>
+  <rect x="26" y="4" width="18" height="18" rx="5" fill="#1d2b25"/>
+  <rect x="42" y="4" width="18" height="18" rx="5" fill="url(#cell)"/>
+  <rect x="4" y="26" width="18" height="18" rx="5" fill="#1d2b25"/>
+  <rect x="26" y="26" width="18" height="18" rx="5" fill="#0b0b12"/>
+  <rect x="42" y="26" width="18" height="18" rx="5" fill="#1d2b25"/>
+  <rect x="4" y="42" width="18" height="18" rx="5" fill="#1d2b25"/>
+  <rect x="26" y="42" width="18" height="18" rx="5" fill="url(#cell)"/>
+  <rect x="42" y="42" width="18" height="18" rx="5" fill="#1d2b25"/>
+</svg>

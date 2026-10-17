@@ -1,0 +1,19 @@
+{
+  "name": "@moydan-example/pulse-tap",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Example Moydan game: rhythm/timing game built with Phaser 4. Tap when the ring aligns with the target band.",
+  "scripts": {
+    "dev": "moydan dev",
+    "build": "moydan build",
+    "test": "moydan test",
+    "package": "moydan pack"
+  },
+  "devDependencies": {
+    "@moydan/sdk": "*",
+    "phaser": "4.2.1",
+    "typescript": "^5.7.0"
+  }
+}

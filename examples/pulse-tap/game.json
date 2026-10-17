@@ -1,0 +1,133 @@
+{
+  "manifestVersion": 1,
+  "slug": "pulse-tap",
+  "title": "Pulse Tap",
+  "description": "A ring breathes towards a target band. Tap on the beat, build a combo, and keep the streak alive before the tempo runs out.",
+  "engine": {
+    "name": "phaser",
+    "version": "4.2.1"
+  },
+  "runtime": {
+    "apiVersion": "1"
+  },
+  "entry": "src/main.ts",
+  "orientation": "portrait",
+  "viewport": {
+    "width": 720,
+    "height": 1280,
+    "scale": "fit"
+  },
+  "input": [
+    "pointer",
+    "touch",
+    "keyboard"
+  ],
+  "capabilities": [
+    "score",
+    "storage",
+    "audio",
+    "vibration"
+  ],
+  "license": {
+    "spdx": "MIT",
+    "file": "LICENSE",
+    "attributionText": "Pulse Tap by the Moydan examples contributors, MIT licensed.",
+    "assets": [
+      {
+        "path": "assets/ui/pulse-mark.svg",
+        "license": "MIT",
+        "source": "original artwork drawn for this example",
+        "attribution": "\"Pulse Tap\" concentric-ring mark, drawn from scratch for the Moydan examples, MIT licensed."
+      }
+    ]
+  },
+  "remix": {
+    "allowed": true,
+    "modes": [
+      "parameters",
+      "source"
+    ],
+    "parameters": [
+      {
+        "key": "tempo",
+        "label": "Starting tempo",
+        "description": "Milliseconds per breath at the start of a run. Lower is calmer.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 900,
+        "max": 2600,
+        "step": 50,
+        "default": 1800
+      },
+      {
+        "key": "band",
+        "label": "Target band",
+        "description": "How wide the target ring is. Wider is more forgiving.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 6,
+        "max": 34,
+        "step": 1,
+        "default": 18
+      },
+      {
+        "key": "lives",
+        "label": "Lives",
+        "description": "Misses you can take before the run ends.",
+        "group": "Difficulty",
+        "type": "number",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "key": "accent",
+        "label": "Accent colour",
+        "description": "Colour of the target band and the pulse ring.",
+        "group": "Look",
+        "type": "color",
+        "default": "#40e0d0"
+      },
+      {
+        "key": "perfect_bonus",
+        "label": "Perfect bonus",
+        "description": "Extra points for hitting dead centre of the band.",
+        "group": "Scoring",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "key": "sound",
+        "label": "Sound",
+        "description": "Play the Web Audio blips. The host can always mute the game.",
+        "group": "Feel",
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  },
+  "presentation": {
+    "thumbnail": "assets/ui/pulse-mark.svg",
+    "accentColor": "#40e0d0",
+    "tags": [
+      "phaser",
+      "timing",
+      "rhythm"
+    ]
+  },
+  "authors": [
+    {
+      "name": "The Moydan examples contributors",
+      "url": "https://github.com/hello2himel/moydan"
+    }
+  ],
+  "budgets": {
+    "firstPlayableBytes": 1572864,
+    "totalBytes": 2097152
+  },
+  "repository": {
+    "provider": "github",
+    "url": "https://github.com/hello2himel/moydan"
+  }
+}

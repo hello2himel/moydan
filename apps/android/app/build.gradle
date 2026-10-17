@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dev.moydan.client'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'dev.moydan.client'
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName '0.1.0'
+        // Default deployment. Changed on first launch from the in-app settings.
+        buildConfigField 'String', 'DEFAULT_SERVER_URL', '"https://moydan.example"'
+    }
+
+    signingConfigs {
+        // The release APK is signed with the local release keystore when present
+        // (apps/android/keystore/moydan-release.jks, see docs/RELEASES.md).
+        // Otherwise the build produces a debug-signed release so the artefact is
+        // always installable.
+        release {
+            def store = rootProject.file('keystore/moydan-release.jks')
+            if (store.exists()) {
+                storeFile store
+                storePassword System.getenv('MOYDAN_KEYSTORE_PASSWORD') ?: ''
+                keyAlias System.getenv('MOYDAN_KEY_ALIAS') ?: 'moydan'
+                keyPassword System.getenv('MOYDAN_KEY_PASSWORD') ?: ''
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (rootProject.file('keystore/moydan-release.jks').exists()) {
+                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
+            }
+        }
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    // Intentionally none: the shell uses only the Android framework so the APK
+    // stays small and the supply chain stays empty.
+}

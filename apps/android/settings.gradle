@@ -1,0 +1,27 @@
+// Android client for Moydan.
+//
+// The Android app is a thin, dependency-free WebView shell around a Moydan
+// deployment's web application. It deliberately does not bundle the server:
+// the platform requires a real origin separation between the authenticated
+// application and untrusted game content, which is provided by the deployment.
+//
+// Configure the server URL on first launch; it is stored locally and can be
+// changed from the in-app settings dialog.
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'Moydan'
+include ':app'
